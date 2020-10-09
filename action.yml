@@ -1,0 +1,17 @@
+name: 'Hello World'
+description: 'Greet someone'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+runs:
+  using: "composite"
+  steps: 
+    - run: | 
+      echo Hello World.
+      echo Line #2 reached
+      shell: bash
+    - id: whats-an-id
+      run: echo idk but we made one
+      shell: bash
